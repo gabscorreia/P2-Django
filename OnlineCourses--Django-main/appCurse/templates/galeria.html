@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titulo %} Galeria - OnlineCourses {% endblock %}
+{% block conteudo %}
+
+<section class="container col-6 mt-5">
+    <h1>Lista de Imagens do sistema:</h1>
+    <br>
+    {% for g in galeria %}
+        <img src="/media/{{ g.foto }}" alt="Foto Usuário" class="foto-perfil"> </td>
+    {% endfor %}
+</section>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titulo %} Cadastrar Novo Curso - EBookShop {% endblock %}
+
+{% block conteudo %}
+
+<section class="container col-6 mt-5">
+    <h1>Cadastrar Novo Curso: </h1>
+    <br>
+    <form action="{% url 'cadastrar_curso' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <!-- Formulário de imagem -->
+        <label class="form-label" for="">Imagem do Curso:</label>
+        {{ form.foto }}  <!-- Campo de imagem (capa do curso) -->
+        
+        <!-- Formulário de título -->
+        <label class="form-label" for="">Título do Curso:</label>
+        {{ form.titulo }}  <!-- Campo de título -->
+        
+        <!-- Formulário de autor -->
+        <label class="form-label" for="">Instrutor do Curso:</label>
+        {{ form.autor }}  <!-- Campo de instrutor -->
+
+        <!-- Formulário de categoria -->
+        <label class="form-label" for="">Categoria do Curso:</label>
+        {{ form.categoria }}  <!-- Campo de categoria (ex: Desenvolvimento, Design, etc.) -->
+
+        <!-- Formulário de descrição -->
+        <label class="form-label" for="">Descrição do Curso:</label>
+        {{ form.descricao }}  <!-- Campo de descrição -->
+
+        <!-- Formulário de duração -->
+        <label class="form-label" for="">Duração do Curso (em horas):</label>
+        {{ form.duracao }}  <!-- Campo de duração -->
+
+        <!-- Formulário de preço -->
+        <label class="form-label" for="">Preço do Curso:</label>
+        {{ form.preco }}  <!-- Campo de preço -->
+        
+        <!-- Botão de submit -->
+        <input class="btn btn-success mb-5" type="submit" value="Cadastrar">
+    </form>
+</section>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titulo %} Contato - OnlineCourses {% endblock %}
+{% block conteudo %}
+
+<main class="container my-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="mb-4">Entre em Contato</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="name" placeholder="Seu nome" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Seu email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="subject" class="form-label">Assunto</label>
+                    <input type="text" class="form-control" id="subject" placeholder="Assunto da mensagem" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Mensagem</label>
+                    <textarea class="form-control" id="message" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <h2 class="mb-4">Informações de Contato</h2>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Endereço:</strong> Rua dos Santos, 116, Centro, São Paulo, SP
+                </li>
+                <li class="list-group-item">
+                    <strong>Telefone:</strong> (14) 1234-5678
+                </li>
+                <li class="list-group-item">
+                    <strong>Email:</strong> contato@cursoexemplo.com
+                </li>
+                <li class="list-group-item">
+                    <strong>Horário de Funcionamento:</strong> Seg - Sex: 9h às 18h
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

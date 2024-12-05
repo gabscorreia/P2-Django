@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titulo %} Cursos - OnlineCourses {% endblock %}
+
+{% block conteudo %}
+
+<div class="container mt-4">
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Capa:</th>
+                <th>Curso:</th>
+                <th>Professor:</th>
+                <th>Preço:</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for curso in dados %}
+                <tr>
+                    <td> <img src="/media/{{ curso.foto }}" alt="Foto Curso" class="foto-perfil"> </td>
+                    <td>{{ curso.titulo }}</td>
+                    <td>{{ curso.autor }}
+                    <td>{{ curso.preco }}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

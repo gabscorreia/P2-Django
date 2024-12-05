@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block conteudo %}
+
+<main class="d-flex justify-content-center">
+    <div class="main-page">
+        <h1 class="text-banner">Plataforma de Cursos Online</h1>
+        <p class="text-p">Aprenda com os melhores instrutores e expanda seus conhecimentos!</p>
+        <a type="button" class="cadastro-button" href="{% url 'cadastrar_user' %}">Cadastre-se</a>
+    </div>
+    <div class="banner">
+        <img class="course-banner" src="{% static 'course.svg' %}" alt="Banner de Cursos">
+    </div>
+</main>
+
+{% endblock %}
